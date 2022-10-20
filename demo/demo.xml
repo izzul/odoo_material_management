@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+
+          <record id="supplier1" model="material_mgt.supplier">
+            <field name="name">Supplier 1</field>
+          </record>
+          <record id="supplier2" model="material_mgt.supplier">
+            <field name="name">Supplier 2</field>
+          </record>
+          <record id="supplier3" model="material_mgt.supplier">
+            <field name="name">Supplier 3</field>
+          </record>
+          <record id="material0" model="material_mgt.material">
+            <field name="code">#mtr000</field>
+            <field name="name">Material 1</field>
+            <field name="buy_price">120</field>
+            <field name="mtype">fabric</field>
+            <field name="supplier_id">1</field>
+          </record>
+          <record id="material1" model="material_mgt.material">
+            <field name="code">#mtr001</field>
+            <field name="name">Material 2</field>
+            <field name="buy_price">150</field>
+            <field name="mtype">fabric</field>
+            <field name="supplier_id">2</field>
+          </record>
+          <record id="material2" model="material_mgt.material">
+            <field name="code">#mtr002</field>
+            <field name="name">Material 2</field>
+            <field name="buy_price">180</field>
+            <field name="mtype">jeans</field>
+            <field name="supplier_id">1</field>
+          </record>
+          <record id="material3" model="material_mgt.material">
+            <field name="code">#mtr003</field>
+            <field name="name">Material 3</field>
+            <field name="buy_price">130</field>
+            <field name="mtype">fabric</field>
+            <field name="supplier_id">3</field>
+          </record>
+
+    </data>
+</odoo>

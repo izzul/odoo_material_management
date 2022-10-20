@@ -1,0 +1,2 @@
+# Simple Material Management Module for Odoo
+It is a simple material management module for Odoo. Includes simple supplier lsiting and several material propterties such as code, name, type, buy_price, and related supplier

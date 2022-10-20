@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="material_mgt.material_list">
+      <field name="name">Material list</field>
+      <field name="model">material_mgt.material</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="code"/>
+          <field name="name"/>
+          <field name="mtype"/>
+          <field name="buy_price"/>
+          <field name="supplier_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="material_mgt.supplier_list">
+      <field name="name">Supplier list</field>
+      <field name="model">material_mgt.supplier</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="material_mgt.material_list_act">
+      <field name="name">Materials</field>
+      <field name="res_model">material_mgt.material</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="material_mgt.supplier_list_act">
+      <field name="name">Suppliers</field>
+      <field name="res_model">material_mgt.supplier</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Material" id="material_mgt.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Material" id="material_mgt.menu_material" parent="material_mgt.menu_root" action="material_mgt.material_list_act"/>
+    <menuitem name="Supplier" id="material_mgt.menu_supplier" parent="material_mgt.menu_root" action="material_mgt.supplier_list_act"/>
+
+  </data>
+</odoo>
